@@ -56,6 +56,11 @@ body {
     width: 500px;
     height: 500px;
     position: relative;
-    bottom: 100px;
+    bottom:200px;
 }
 
+@media screen and (max-width: 1200px) {
+    #fortune-ball {
+        bottom: 0px;
+    }
+}
