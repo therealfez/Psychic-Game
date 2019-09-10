@@ -1,4 +1,4 @@
-var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 var wins = 0;
 var losses = 0;
@@ -6,18 +6,20 @@ var guessesLeft = 10;
 var letterUser = [];
 var eachofLetters = null;
 
-var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+var computerGuess = letters[Math.floor(Math.random() *   letters.length)];
 function countGuessesLeft() {
-    document.querySelector("#left").innerHTML = "Guesses Left: " + guessesLeft;
+    document.querySelector("#guesses-left").innerHTML = guessesLeft;
+    console.log(computerGuess)
 }
 function farUserGuesses() {
-    document.querySelector("#guesses").innerHTML = "Your Guesses so far: " + letterUser.join(" ");
+    document.querySelector("#user-guesses").innerHTML = letterUser.join(" ");
 }
 countGuessesLeft();
 var restart = function () {
     guessesLeft = 10;
     letterUser = [];
-    var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+    computerGuess = letters[Math.floor(Math.random() * letters.length)];
 }
 document.onkeyup = function (event) {
     guessesLeft--;
@@ -27,11 +29,11 @@ document.onkeyup = function (event) {
     farUserGuesses();
     if (userGuess === computerGuess) {
         wins++;
-        document.querySelector("#win").innerHTML = "Wins: " + wins;
+        document.querySelector("#wins").innerHTML = wins;
         restart();
     } else if (guessesLeft === 0) {
         losses++;
-        document.querySelector("#lose").innerHTML = "Loses: " + losses;
+        document.querySelector("#losses").innerHTML = losses;
         restart();
     }
-};
+}; 
