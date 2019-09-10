@@ -1,6 +1,5 @@
 body {
     background-color: #000000;
-    font-family:  'Bungee Shade', cursive;
     color: #F6BC48;
     text-align: center;
 }
@@ -10,8 +9,9 @@ body {
     text-align: left;
 }
 
-h1 {
+#title {
     font-size: 96px;
+    font-family:  'Bungee Shade', cursive;
 }
 
 .lead {
@@ -21,4 +21,11 @@ h1 {
 .container {
     text-align: left;
     font-size: 24px;
+    font-family: 'Bungee', cursive;
+
+}
+
+#user-guesses {
+    font-family:  'Bungee Shade', cursive;
+
 }
