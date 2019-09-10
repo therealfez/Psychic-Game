@@ -1,5 +1,6 @@
 body {
     background-color: #000000;
+    font-family:  'Bungee Shade', cursive;
     color: #F6BC48;
     text-align: center;
 }
@@ -7,4 +8,17 @@ body {
     background-color: #000000;
     color: #F6BC48;
     text-align: left;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+.lead {
+    font-size: 32px;
+}
+
+.container {
+    text-align: left;
+    font-size: 24px;
 }
